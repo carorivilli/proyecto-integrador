@@ -1,0 +1,54 @@
+#contenedorLogin {
+  display: flex;
+  min-width: 320px;
+  max-width: 500px;
+  width: 100%;
+  height: fit-content;
+  padding: 0px 12px;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(
+    180deg,
+    #fcfdfe 20%,
+    #c1a4ff 90.82%,
+    #874cfc 180%
+  );
+  min-height: 100vh;
+}
+
+.tituloLogin {
+  color: #290276;
+  font-family: Paytone One;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 24px;
+}
+
+
+
+.recordar {
+  margin: 15px 0 20px 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.recordar:hover {
+  text-decoration: underline;
+}
+.registrarse {
+  padding: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+.errorUP {
+  color: red;
+  font-style: normal;
+  font-weight: 700;
+}

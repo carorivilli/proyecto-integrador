@@ -1,0 +1,18 @@
+.label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
+  color: #404040;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.opcional{
+  color: #5BB0FF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; 
+}

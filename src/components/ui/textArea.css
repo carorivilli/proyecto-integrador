@@ -1,0 +1,11 @@
+.observaciones {
+  display: flex;
+  height: 105px;
+  padding: 8px 12px;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #c2c2c2;
+  background: #fff;
+}

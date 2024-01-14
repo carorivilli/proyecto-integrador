@@ -1,0 +1,47 @@
+.box1 {
+  display: flex;
+  padding: 8px 12px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #c2c2c2;
+  background: #fff;
+}
+
+.box1Error{
+  display: flex;
+  padding: 8px 12px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #c2c2c2;
+  background: #fff;
+  border: 1px solid #FF0000;
+}
+
+
+.boxUsuario {
+  display: flex;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #c2c2c2;
+  background: #fff;
+}
+
+.boxPasw {
+  display: flex;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #c2c2c2;
+  background: #fff;
+}
