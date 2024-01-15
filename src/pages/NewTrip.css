@@ -3,3 +3,18 @@
   font-style: normal;
   font-weight: 700;
 }
+
+#contenedorGeneral {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 36px 24px 24px 24px;
+  gap: 8px;
+  background: linear-gradient(180deg, #329bfb 0%, #fff 23.96%);
+  min-width: 320px;
+  max-width: 500px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100vh;
+  justify-content: space-between;
+}

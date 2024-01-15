@@ -78,7 +78,7 @@ function TripsForm(props) {
   };
 
   return (
-    <div id="contenedorGeneral">
+    <div>
       <h1 className="tituloEditionPage">
         {isNewTrip && "Nuevo Viaje"}
         {isEditTrip && `Editar Viaje ${tripValue.id}`}

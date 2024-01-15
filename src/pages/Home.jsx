@@ -1,9 +1,10 @@
 
 
 import "./home.css";
-import { Link } from "react-router-dom";
+
 import Trips from "../components/ui/Trips";
-import Button from "../components/ui/Button";
+
+import SimpleBottomNavigation from "../components/ui/BottomNavigation";
 
 export const trips = [
   {
@@ -88,9 +89,6 @@ function Home() {
       </div>
       <div id="contenedorViajesTitulo">
         <h2 className="titulo">Ultimos viajes</h2>
-        <Link to="/allTrips" className="verTodos">
-          Ver todos
-        </Link>
       </div>
       <div className="viajesHome">
         {trips.map((trip) => (
@@ -102,9 +100,11 @@ function Home() {
           />
         ))}
       </div>
-      <Button href="/newTrip" variant="botonNuevoViaje">
-        + Nuevo Viaje
-      </Button>
+      <div className="barraNav">
+        <SimpleBottomNavigation number={1} />
+      </div>
+      
+
     </div>
   );
 }

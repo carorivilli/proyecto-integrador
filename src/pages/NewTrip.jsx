@@ -1,7 +1,14 @@
 import TripsForm from "../components/trips/TripsForm";
+import SimpleBottomNavigation from "../components/ui/BottomNavigation";
+import "./newTrip.css";
 
 function NewTrip() {
-  return <TripsForm modo="new"></TripsForm>;
+  return (
+    <div id="contenedorGeneral">
+      <TripsForm modo="new"></TripsForm>
+      <SimpleBottomNavigation number={2} />
+    </div>
+  );
 }
 
 export default NewTrip;
