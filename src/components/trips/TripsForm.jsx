@@ -5,9 +5,13 @@ import Input from "../ui/Input";
 import Label from "../ui/Label";
 import TextArea from "../ui/TextArea";
 import Button from "../ui/Button";
+import { useTrips } from "../../hooks/useTrips";
+
+
 
 function TripsForm(props) {
   const { modo, tripValue } = props;
+  const { addTrip, editTrip } = useTrips();
 
   const isNewTrip = modo === "new";
   const isEditTrip = modo === "edit";
@@ -73,6 +77,12 @@ function TripsForm(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if(isEditTrip){
+      editTrip(tripValue.id, trip);
+    }
+    if(isNewTrip){
+      addTrip(trip);
+    }
     alert("Se ha guardado el viaje");
     navigate("/home");
   };

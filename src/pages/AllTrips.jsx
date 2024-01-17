@@ -1,10 +1,11 @@
 
 import Trips from "../components/ui/Trips";
-import { trips } from "./Home";
+import { useTrips } from "../hooks/useTrips";
 import "./allTrips.css"
 import SimpleBottomNavigation from "../components/ui/BottomNavigation";
 
 function AllTrips() {
+  const {trips} = useTrips();
   return (
     <div className="contenedor">
       <h1 className="titulo">Todos los viajes</h1>

@@ -6,70 +6,10 @@ import Trips from "../components/ui/Trips";
 
 import SimpleBottomNavigation from "../components/ui/BottomNavigation";
 
-export const trips = [
-  {
-    id: 1,
-    date: new Date(2023, 9, 13),
-    amount: "2897.33",
-  },
-  {
-    id: 2,
-    date: new Date(2023, 9, 12),
-    amount: "3130.41",
-  },
-  {
-    id: 3,
-    date: new Date(2023, 9, 11),
-    amount: "4800.32",
-  },
-  {
-    id: 4,
-    date: new Date(2023, 9, 10),
-    amount: "3500.56",
-  },
-  {
-    id: 5,
-    date: new Date(2023, 9, 13),
-    amount: "2897.33",
-  },
-  {
-    id: 6,
-    date: new Date(2023, 9, 12),
-    amount: "3130.41",
-  },
-  {
-    id: 7,
-    date: new Date(2023, 9, 11),
-    amount: "4800.32",
-  },
-  {
-    id: 8,
-    date: new Date(2023, 9, 10),
-    amount: "3500.56",
-  },
-  {
-    id: 9,
-    date: new Date(2023, 9, 13),
-    amount: "2897.33",
-  },
-  {
-    id: 10,
-    date: new Date(2023, 9, 12),
-    amount: "3130.41",
-  },
-  {
-    id: 11,
-    date: new Date(2023, 9, 11),
-    amount: "4800.32",
-  },
-  {
-    id: 12,
-    date: new Date(2023, 9, 10),
-    amount: "3500.56",
-  },
-];
+import { useTrips } from "../hooks/useTrips";
 
 function Home() {
+  const {trips} = useTrips();
   return (
     <div id="contenedor">
       <h1 className="tituloMisViajes">Mis Viajes</h1>
@@ -99,6 +39,9 @@ function Home() {
             amount={trip.amount}
           />
         ))}
+        {trips.length === 0 && (
+          <p>No hay viajes cargados</p>
+        )}
       </div>
       <div className="barraNav">
         <SimpleBottomNavigation number={1} />
