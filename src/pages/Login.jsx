@@ -1,4 +1,4 @@
-import "./Login.css";
+import "./login.css";
 import Button from "../components/ui/Button";
 import Image from "../components/ui/Image";
 import Label from "../components/ui/Label";
