@@ -1,6 +1,6 @@
 import TripsForm from "../components/trips/TripsForm";
 import SimpleBottomNavigation from "../components/ui/BottomNavigation";
-import "./newTrip.css";
+import "./NewTrip.css";
 
 function NewTrip() {
   return (
