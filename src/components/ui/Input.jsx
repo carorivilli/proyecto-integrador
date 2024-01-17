@@ -1,4 +1,4 @@
-import "./Input.css";
+import "./input.css";
 import PropTypes from "prop-types";
 function Input(props) {
   const { type, placeHolder, onChange, value, name, hasError, disabled,className} = props;
