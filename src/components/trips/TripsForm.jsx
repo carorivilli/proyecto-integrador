@@ -36,7 +36,6 @@ function TripsForm(props) {
   const handleInputChange = (event) => {
     const value = event.target.value;
     const campo = event.target.name;
-    console.log(value);
     if (campo === "amount") {
       setError({ ...error, amount: validateAmount(value) });
     }
@@ -55,8 +54,6 @@ function TripsForm(props) {
   };
 
   const validateAmount = (value) => {
-    console.log(value);
-    console.log(typeof value);
     if (value === "") {
       return "";
     }

@@ -1,13 +1,13 @@
 import "./Input.css";
 import PropTypes from "prop-types";
 function Input(props) {
-  const { type, placeHolder, onChange, value, name, hasError, disabled} = props;
+  const { type, placeHolder, onChange, value, name, hasError, disabled,className} = props;
   return (
     <>
       <input
         type={type ?? "text"}
         id="monto"
-        className = {hasError ? "box1Error" : "box1"}
+        className = {(hasError ? "box1Error" : "box1") + " " + className}
         placeholder={placeHolder}
         onChange={onChange}
         value={value}

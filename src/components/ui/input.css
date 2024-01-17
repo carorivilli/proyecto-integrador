@@ -7,9 +7,10 @@
   border-radius: 8px;
   border: 1px solid #c2c2c2;
   background: #fff;
+  box-sizing: border-box;
 }
 
-.box1Error{
+.box1Error {
   display: flex;
   padding: 8px 12px;
   align-items: center;
@@ -18,9 +19,9 @@
   border-radius: 8px;
   border: 1px solid #c2c2c2;
   background: #fff;
-  border: 1px solid #FF0000;
+  border: 1px solid #ff0000;
+  box-sizing: border-box;
 }
-
 
 .boxUsuario {
   display: flex;
@@ -30,8 +31,8 @@
   gap: 10px;
   align-self: stretch;
   border-radius: 8px;
-  border: 1px solid #c2c2c2;
   background: #fff;
+  width: 100%;
 }
 
 .boxPasw {
@@ -42,6 +43,6 @@
   gap: 10px;
   align-self: stretch;
   border-radius: 8px;
-  border: 1px solid #c2c2c2;
   background: #fff;
+  width: 100%;
 }

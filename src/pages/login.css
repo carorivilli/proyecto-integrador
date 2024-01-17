@@ -16,6 +16,7 @@
     #874cfc 180%
   );
   min-height: 100vh;
+  box-sizing: border-box;
 }
 
 .tituloLogin {
@@ -50,4 +51,12 @@
   color: red;
   font-style: normal;
   font-weight: 700;
+}
+
+.contraseña{
+  width:100%;
+}
+
+.usuario{
+  width:100%;
 }

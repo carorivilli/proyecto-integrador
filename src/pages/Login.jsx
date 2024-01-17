@@ -5,13 +5,11 @@ import Label from "../components/ui/Label";
 import Input from "../components/ui/Input";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLogin } from "../hooks/useLogin";
 
 function Login() {
-
-  const userValido = "carorivilli@gmail.com";
-  const passValido = "123456";
   const navigate = useNavigate();
-
+  const { doLogin } = useLogin();
 
   const [user, setUser] = useState({
     user: "",
@@ -22,7 +20,6 @@ function Login() {
     user: "",
     password: "",
   });
-
 
   const handleInputChange = (event) => {
     const value = event.target.value;
@@ -40,68 +37,67 @@ function Login() {
 
   const validarUsuario = (event) => {
     event.preventDefault();
-    if (user.user === userValido && user.password === passValido) {
+    const loginResult = doLogin(user);
+    if (loginResult) {
       setError({ ...error, user: "", password: "" });
       alert("Usuario correcto");
       navigate("/home");
-      
     } else {
-      setError({ ...error, user: "Usuario incorrecto", password: "Contraseña incorrecta" });
-      alert("Usuario incorrecto");
-      
-      
+      setError({
+        ...error,
+        user: " ",
+        password: "Usuario o contraseña incorrectos",
+      });
+      alert("Usuario o contraseña incorrectos");
     }
-  }
-
-  
-
+  };
 
   return (
-      <form onSubmit={validarUsuario}>
-        <div id="contenedorLogin">
-          <h1 className="tituloLogin">¡Mi Comisión!</h1>
-          <Image />
-          <div className="usuario">
-            <Label>Usuario</Label>
-            <Input
-              type="text"
-              placeHolder="Ingrese su usuario"
-              value={user.user}
-              className="boxUsuario"
-              onChange={handleInputChange}
-              name="user"
-              hasError={Boolean(error.user)}
-            />
-          </div>
-          <p className="errorUP">{error.user}</p>
-          <div className="contraseña">
-            <Label>Contraseña</Label>
-            <Input
-              type="text"
-              placeHolder="Ingrese su contraseña"
-              className="boxPasw"
-              onChange={handleInputChange}
-              value={user.password}
-              name="password"
-              hasError={Boolean(error.password)}
-            />
-            <p className="errorUP">{error.password}</p>
-          </div>
-          <div className="recordar">¿Olvidó su contraseña?</div>
-          <div>
-            <Button
-              variant="botonInicioSesion"
-              disabled={activarBoton()}
-              type="submit"
-            >
-              Inicar Sesion
-            </Button>
-          </div>
-          <div className="registrarse">
-            <a href="">Registrarse</a>
-          </div>
+    <form onSubmit={validarUsuario}>
+      <div id="contenedorLogin">
+        <h1 className="tituloLogin">¡Mi Comisión!</h1>
+        <Image />
+        <div className="usuario">
+          <Label>Usuario</Label>
+          <Input
+            type="text"
+            placeHolder="Ingrese su usuario"
+            value={user.user}
+            className="boxUsuario"
+            onChange={handleInputChange}
+            name="user"
+            hasError={Boolean(error.user)}
+          />
         </div>
-      </form>
+        <p className="errorUP">{error.user}</p>
+        <div className="contraseña">
+          <Label>Contraseña</Label>
+          <Input
+            type="text"
+            placeHolder="Ingrese su contraseña"
+            className="boxPasw"
+            onChange={handleInputChange}
+            value={user.password}
+            name="password"
+            hasError={Boolean(error.password)}
+          />
+          <p className="errorUP">{error.password}</p>
+        </div>
+        <div className="recordar">¿Olvidó su contraseña?</div>
+        <div>
+          <Button
+            variant="botonInicioSesion"
+            disabled={activarBoton()}
+            type="submit"
+          >
+            Inicar Sesion
+          </Button>
+        </div>
+        <div className="registrarse">
+          <a href="">Registrarse</a>
+        </div>
+      </div>
+    </form>
   );
 }
 
