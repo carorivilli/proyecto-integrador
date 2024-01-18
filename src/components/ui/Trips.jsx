@@ -12,7 +12,7 @@ function Trips(props) {
       <div className="datosViaje">
         <p className="fecha">{date.toLocaleString().split(",")[0]}</p>
         <p className="montoViaje">
-          {entero} <sup>{decimal}</sup>
+          $ {entero} <sup>{decimal.toString().padStart(2,"0")}</sup>
         </p>
       </div>
       <div className="accionesViaje">
