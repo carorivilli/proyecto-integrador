@@ -7,6 +7,10 @@
 ## Descripcion
 TripsApp es una aplicación web diseñada para simplificar el registro y seguimiento de viajes, especialmente orientada a profesionales que trabajan en el Aeropuerto. El proyecto surge con el propósito de ayudar a aquellos que necesitan llevar un control de los viajes realizados y el cálculo de las comisiones correspondientes.
 
+## Usuario y Contraseña para uso de la App
+* Usuario: carorivilli@gmail.com
+* Contraseña: 123456
+
 ## Características Princiaples
 * Registro de viajes de forma sencilla y rápida
 * Seguimiento de comisiones pendientes.
